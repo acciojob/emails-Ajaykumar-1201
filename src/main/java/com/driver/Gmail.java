@@ -53,8 +53,9 @@ public class Gmail extends Email {
         // If the given message is found in any mail in the inbox, move the mail to trash, else do nothing
         for(Mail msg : inbox) {
             if(msg.message.equals(message)) {
-                Mail DeletedMail = inbox.remove();
-                trash.add(DeletedMail);
+//                Mail DeletedMail = msg;
+                inbox.remove(msg);
+                trash.add(msg);
             }
         }
 
@@ -77,8 +78,6 @@ public class Gmail extends Email {
         if(inbox.size() == 0) return null;
         // Else, return the message of the oldest mail present in the inbox
         return inbox.peek().message;
-
-
     }
 
     public int findMailsBetweenDates(Date start, Date end){
