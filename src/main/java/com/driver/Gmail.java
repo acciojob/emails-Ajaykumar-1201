@@ -7,14 +7,12 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class Gmail extends Email {
 
-    static int inboxCapacity; //maximum number of mails inbox can store
+    int inboxCapacity; //maximum number of mails inbox can store
     //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
     //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
     private Queue<Mail> inbox;
     private Queue<Mail> trash;
-    public Gmail(String emailId) {
-        super(emailId);
-    }
+
     public Gmail(String emailId, int inboxCapacity) {
         super(emailId);
         inbox = new LinkedList<>();
