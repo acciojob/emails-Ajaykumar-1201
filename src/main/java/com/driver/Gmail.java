@@ -7,7 +7,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 
 public class Gmail extends Email {
 
-    int inboxCapacity; //maximum number of mails inbox can store
+    static int inboxCapacity; //maximum number of mails inbox can store
     //Inbox: Stores mails. Each mail has date (Date), sender (String), message (String). It is guaranteed that message is distinct for all mails.
     //Trash: Stores mails. Each mail has date (Date), sender (String), message (String)
     private Queue<Mail> inbox;

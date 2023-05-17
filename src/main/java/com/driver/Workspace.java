@@ -3,8 +3,10 @@ package com.driver;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.time.LocalTime;
-import java.util.*;
+
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class Workspace extends Gmail{
 
@@ -34,7 +36,7 @@ public class Workspace extends Gmail{
         Meeting lastMeeting = null;
 
         for (Meeting meeting : calendar) {
-            if (lastMeeting == null || meeting.getStartTime().compareTo(lastMeeting.getEndTime()) >= 0) {
+            if (lastMeeting == null || meeting.getStartTime().compareTo(lastMeeting.getEndTime()) > 0) {
                 maxMeetings++;
                 lastMeeting = meeting;
             }
