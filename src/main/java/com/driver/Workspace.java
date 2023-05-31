@@ -3,10 +3,8 @@ package com.driver;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.time.LocalTime;
-
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class Workspace extends Gmail{
 
@@ -14,7 +12,7 @@ public class Workspace extends Gmail{
 
     public Workspace(String emailId) {
         // The inboxCapacity is equal to the maximum value an integer can store.
-        super(emailId, Integer.MAX_VALUE);
+        super(emailId,Integer.MAX_VALUE);
         this.calendar = new ArrayList<>();
 
     }
@@ -48,6 +46,5 @@ public class Workspace extends Gmail{
             }
         }
         return count;
-
     }
 }
