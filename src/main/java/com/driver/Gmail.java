@@ -52,8 +52,9 @@ public class Gmail extends Email {
         for(Mail msg : inbox) {
             if(msg.message.equals(message)) {
 //                Mail DeletedMail = msg;
-                inbox.remove(msg);
                 trash.add(msg);
+                inbox.remove(msg);
+                break;
             }
         }
 
